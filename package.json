@@ -1,7 +1,7 @@
 {
-  "name": "no-smoking-recordings-covers",
+  "name": "no-smoking-recordings-cover",
   "version": "1.0.0",
-  "description": "No Smoking Recordings covers generator",
+  "description": "No Smoking Recordings release cover generator",
   "private": true,
   "scripts": {
     "start": "webpack serve --config webpack.dev.js",
