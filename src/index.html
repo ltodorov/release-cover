@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Smoking Recordings Release Cover</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;900&display=swap">
+</head>
+
+<body>
+    <div class="container">
+        <form id="details" class="details" method="POST">
+            <h1 class="title">Release Details</h1>
+
+            <label for="artist-line-1" class="details__label">Artist Line 1 (optional)</label>
+            <input type="text" name="artist-line-1" id="artist-line-1" class="details__el details__input" autocomplete="off" data-lpignore="true">
+
+            <label for="artist-line-2" class="details__label">Artist Line 2</label>
+            <input type="text" name="artist-line-2" id="artist-line-2" class="details__el details__input" autocomplete="off" data-lpignore="true">
+
+            <label for="release-title" class="details__label">Release Title</label>
+            <input type="text" name="release-title" id="release-title" class="details__el details__input" autocomplete="off" data-lpignore="true">
+
+            <label for="release-no" class="details__label">Release Number</label>
+            <input type="text" name="release-no" id="release-no" class="details__el details__input" autocomplete="off" data-lpignore="true" placeholder="100">
+
+            <button type="submit" class="details__el">Generate</button>
+            <button type="reset" class="details__el">Reset</button>
+
+            <a href="#" id="download" class="download">Download</a>
+        </form>
+
+        <canvas id="cover" class="cover"></canvas>
+    </div>
+</body>
+
+</html>
