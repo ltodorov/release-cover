@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>No Smoking Recordings Release Cover</title>
+    <meta name="description" content="No Smoking Recordings release cover generator">
+    <title>Release Cover</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;900&display=swap">
 </head>
@@ -15,21 +16,29 @@
             <h1 class="title">Release Details</h1>
 
             <label for="artist-line-1" class="details__label">Artist Line 1 (optional)</label>
-            <input type="text" name="artist-line-1" id="artist-line-1" class="details__el details__input" autocomplete="off" data-lpignore="true">
+            <input type="text" name="artist-line-1" id="artist-line-1" class="details__el details__input"
+                autocomplete="off" data-lpignore="true">
 
             <label for="artist-line-2" class="details__label">Artist Line 2</label>
-            <input type="text" name="artist-line-2" id="artist-line-2" class="details__el details__input" autocomplete="off" data-lpignore="true">
+            <input type="text" name="artist-line-2" id="artist-line-2" class="details__el details__input"
+                autocomplete="off" data-lpignore="true">
 
             <label for="release-title" class="details__label">Release Title</label>
-            <input type="text" name="release-title" id="release-title" class="details__el details__input" autocomplete="off" data-lpignore="true">
+            <input type="text" name="release-title" id="release-title" class="details__el details__input"
+                autocomplete="off" data-lpignore="true">
 
             <label for="release-no" class="details__label">Release Number</label>
-            <input type="text" name="release-no" id="release-no" class="details__el details__input" autocomplete="off" data-lpignore="true" placeholder="100">
+            <input type="text" name="release-no" id="release-no" class="details__el details__input" autocomplete="off"
+                data-lpignore="true" placeholder="100">
 
             <button type="submit" class="details__el">Generate</button>
             <button type="reset" class="details__el">Reset</button>
 
             <a href="#" id="download" class="download">Download</a>
+
+            <p xmlns:dct="http://purl.org/dc/terms/" xmlns:cc="http://creativecommons.org/ns#">
+                <a rel="cc:attributionURL" property="dct:title" href="https://work">Work</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://author">Lyubomir</a> is licensed under <a rel="license noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-nd/4.0?ref=chooser-v1" target="_blank">CC BY-NC-ND 4.0</a>
+            </p>
         </form>
 
         <canvas id="cover" class="cover"></canvas>

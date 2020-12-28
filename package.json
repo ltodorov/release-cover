@@ -1,5 +1,5 @@
 {
-  "name": "no-smoking-recordings-cover",
+  "name": "release-cover",
   "version": "1.0.0",
   "description": "No Smoking Recordings release cover generator",
   "private": true,
@@ -12,7 +12,7 @@
     "typescript"
   ],
   "author": "Lyubomir Todorov",
-  "license": "GPL-3.0-or-later",
+  "license": "CC-BY-ND-4.0",
   "devDependencies": {
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^5.0.1",
