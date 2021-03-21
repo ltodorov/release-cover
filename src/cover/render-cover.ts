@@ -12,14 +12,13 @@ type RenderProps = ReleaseDetailsProps & {
     isRandom: boolean;
 }
 
-async function renderCover(props: RenderProps) {
-    const {
-        isRandom = true,
-        artistLine1,
-        artistLine2,
-        releaseTitle,
-        releaseNo
-    } = props;
+async function renderCover({
+    isRandom = true,
+    artistLine1,
+    artistLine2,
+    releaseTitle,
+    releaseNo
+}: RenderProps) {
     const cs = document.getElementById("cover");
 
     if (cs && cs instanceof HTMLCanvasElement) {

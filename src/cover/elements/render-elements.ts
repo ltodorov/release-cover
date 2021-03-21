@@ -9,7 +9,9 @@ function renderElements(ctx: CanvasRenderingContext2D, n: number = 30) {
     for (let i = 0; i < n; i += 1) {
         const posX = getPosition(i);
         const posY = getPosition(i);
-        const size = elementSizes[Math.floor(Math.random() * elementSizes.length)];
+        const size = elementSizes[Math.floor(
+            Math.random() * elementSizes.length
+        )];
 
         ctx.fillStyle = `hsl(0, 0%, ${Math.random() * 50}%)`;
         ctx.globalAlpha = Math.random() / 2;
