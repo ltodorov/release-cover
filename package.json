@@ -14,13 +14,13 @@
   "author": "Lyubomir Todorov",
   "license": "CC-BY-ND-4.0",
   "devDependencies": {
-    "css-loader": "^5.2.4",
+    "css-loader": "^5.2.6",
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.1",
     "style-loader": "^2.0.0",
-    "ts-loader": "^9.1.2",
-    "typescript": "^4.2.4",
-    "webpack": "^5.37.0",
+    "ts-loader": "^9.2.2",
+    "typescript": "^4.3.2",
+    "webpack": "^5.38.1",
     "webpack-cli": "^4.7.0",
     "webpack-dev-server": "^3.11.2",
     "webpack-merge": "^5.7.3"
