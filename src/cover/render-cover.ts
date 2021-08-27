@@ -41,7 +41,7 @@ async function renderCover({
                     releaseTitle,
                     releaseNo
                 });
-            } catch (err) {
+            } catch (err: any) {
                 throw new Error(err);
             }
         }
