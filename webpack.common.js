@@ -15,7 +15,12 @@ module.exports = {
             type: "asset/resource"
         }, {
             test: /\.tsx?$/i,
-            use: "ts-loader"
+            use: [{
+                loader: "esbuild-loader",
+                options: {
+                    loader: "ts"
+                }
+            }]
         }, {
             test: /\.html$/i,
             use: "html-loader"
