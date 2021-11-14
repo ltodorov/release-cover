@@ -12,15 +12,19 @@ module.exports = {
     module: {
         rules: [{
             test: /\.(png|jpe?g|gif|svg|webp)$/i,
+            exclude: /node_modules/,
             type: "asset/resource"
         }, {
             test: /\.tsx?$/i,
+            exclude: /node_modules/,
             use: "ts-loader"
         }, {
             test: /\.html$/i,
+            exclude: /node_modules/,
             use: "html-loader"
         }, {
             test: /\.css$/i,
+            exclude: /node_modules/,
             use: ["style-loader", "css-loader"]
         }]
     },
