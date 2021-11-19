@@ -15,6 +15,7 @@
   "license": "CC-BY-ND-4.0",
   "devDependencies": {
     "css-loader": "^6.5.0",
+    "fork-ts-checker-webpack-plugin": "^6.4.0",
     "html-loader": "^3.0.0",
     "html-webpack-plugin": "^5.5.0",
     "style-loader": "^3.3.1",
