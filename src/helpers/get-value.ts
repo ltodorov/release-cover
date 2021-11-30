@@ -1,5 +1,5 @@
 function getValue(item: Element | RadioNodeList | null): string {
-    return item && item instanceof HTMLInputElement ? item.value : "";
+    return item instanceof HTMLInputElement ? item.value : "";
 }
 
 export {

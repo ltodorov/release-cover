@@ -13,7 +13,7 @@ function submit(event: Event) {
 
     const target = event.target;
 
-    if (target && target instanceof HTMLFormElement) {
+    if (target instanceof HTMLFormElement) {
         const elements = target.elements;
 
         renderCover({

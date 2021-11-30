@@ -21,7 +21,7 @@ async function renderCover({
 }: RenderProps) {
     const cs = document.getElementById("cover");
 
-    if (cs && cs instanceof HTMLCanvasElement) {
+    if (cs instanceof HTMLCanvasElement) {
         cs.width = coverSize;
         cs.height = coverSize;
         const ctx = cs.getContext("2d");
