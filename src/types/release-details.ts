@@ -5,6 +5,6 @@ type ReleaseDetailsProps = {
     releaseNo: string;
 }
 
-export {
+export type {
     ReleaseDetailsProps
 };

@@ -45,6 +45,6 @@ function renderTexts({
 }
 
 export {
-    RenderTextsProps,
+    type RenderTextsProps,
     renderTexts
 };
