@@ -1,7 +1,8 @@
-const coverSize: number = 3000;
-const coverPadding: number = 300;
+const coverConfig = {
+  size: 3000,
+  padding: 300,
+};
 
 export {
-  coverSize,
-  coverPadding
+  coverConfig,
 };

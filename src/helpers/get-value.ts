@@ -3,5 +3,5 @@ function getValue(item: Element | RadioNodeList | null): string {
 }
 
 export {
-  getValue
+  getValue,
 };

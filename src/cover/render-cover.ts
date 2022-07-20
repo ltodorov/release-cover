@@ -1,35 +1,35 @@
-import { ReleaseDetailsProps } from "../types/release-details";
+import { handleError } from "../handlers/error";
+import type { ReleaseDetails } from "../types/release-details";
 import { renderBackground } from "./backround/render-background";
-import { coverSize } from "./cover-config";
+import { coverConfig } from "./cover-config";
 import { setDownloadLink } from "./download/set-download-link";
 import { renderElements } from "./elements/render-elements";
 import { renderLogo } from "./logo/render-logo";
 import { renderTexts } from "./texts/render-texts";
 
-import "./cover.css";
-
-type RenderProps = ReleaseDetailsProps & {
-  isRandom: boolean;
+interface RenderProps extends ReleaseDetails {
+  elementsAmount: number;
 }
 
 async function renderCover({
-  isRandom = true,
   artistLine1,
   artistLine2,
   releaseTitle,
-  releaseNo
+  releaseNo,
+  elementsAmount = 0,
 }: RenderProps) {
-  const cs = document.getElementById("cover");
+  try {
+    const cs = document.getElementById("cover");
+    const { size } = coverConfig;
 
-  if (cs instanceof HTMLCanvasElement) {
-    cs.width = coverSize;
-    cs.height = coverSize;
-    const ctx = cs.getContext("2d");
+    if (cs instanceof HTMLCanvasElement) {
+      cs.width = size;
+      cs.height = size;
+      const ctx = cs.getContext("2d");
 
-    if (ctx) {
-      try {
-        if (isRandom) {
-          renderElements(ctx, 30);
+      if (ctx) {
+        if (elementsAmount > 0) {
+          renderElements(ctx, elementsAmount);
         } else {
           await renderBackground(ctx);
         }
@@ -39,17 +39,17 @@ async function renderCover({
           artistLine1,
           artistLine2,
           releaseTitle,
-          releaseNo
+          releaseNo,
         });
-      } catch (err: any) {
-        throw new Error(err);
       }
-    }
 
-    setDownloadLink(cs, `NSR${releaseNo}`);
+      setDownloadLink(cs, `NSR${releaseNo}`);
+    }
+  } catch (err: unknown) {
+    handleError(err);
   }
 }
 
 export {
-  renderCover
+  renderCover,
 };
