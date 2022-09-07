@@ -2,6 +2,14 @@
 <html lang="en">
 
 <head>
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-MDN44MM');</script>
   <meta charset="UTF-8">
   <link rel="icon" type="image/svg+xml" href="/src/favicon.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,26 +20,24 @@
 </head>
 
 <body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MDN44MM" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
   <div class="container">
-    <form id="details" class="details" method="POST">
+    <form id="details" class="details" method="POST" autocomplete="off">
       <h1 class="title">Release Details</h1>
 
       <div class="details__wrapper">
         <label for="artist-line-1" class="details__label">Artist Line 1 (optional)</label>
-        <input type="text" name="artist-line-1" id="artist-line-1" class="details__el details__input"
-          autocomplete="off">
+        <input type="text" name="artist-line-1" id="artist-line-1" class="details__el details__input">
 
         <label for="artist-line-2" class="details__label">Artist Line 2</label>
-        <input type="text" name="artist-line-2" id="artist-line-2" class="details__el details__input"
-          autocomplete="off">
+        <input type="text" name="artist-line-2" id="artist-line-2" class="details__el details__input">
 
         <label for="release-title" class="details__label">Release Title</label>
-        <input type="text" name="release-title" id="release-title" class="details__el details__input"
-          autocomplete="off">
+        <input type="text" name="release-title" id="release-title" class="details__el details__input">
 
         <label for="release-no" class="details__label">Release Number</label>
-        <input type="text" name="release-no" id="release-no" class="details__el details__input" autocomplete="off"
-          placeholder="100">
+        <input type="text" name="release-no" id="release-no" class="details__el details__input" placeholder="100">
 
         <label for="random-elements" class="details__label">Random Elements</label>
         <input type="range" name="random-elements" id="random-elements" min="0" max="50" step="10" value="0"
@@ -48,17 +54,19 @@
 
       <button type="submit" class="details__el">Generate</button>
       <button type="reset" class="details__el">Reset</button>
-
       <a href="#" id="download" class="download">Download</a>
 
       <p xmlns:dct="http://purl.org/dc/terms/" xmlns:cc="http://creativecommons.org/ns#">
-        <a rel="cc:attributionURL" property="dct:title" href="https://github.com/ltodorov/release-cover">Release
-          Cover</a> by
-        <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/ltodorov">Lyubomir
-          Todorov</a> is licensed under
-        <a rel="license noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-nd/4.0?ref=chooser-v1"
-          target="_blank">CC BY-NC-ND
-          4.0</a>
+        <small>
+          <a rel="cc:attributionURL" property="dct:title" href="https://github.com/ltodorov/release-cover">Release
+            Cover</a> by
+          <a rel="cc:attributionURL dct:creator" property="cc:attributionName"
+            href="https://github.com/ltodorov">Lyubomir
+            Todorov</a> is licensed under
+          <a rel="license noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-nd/4.0?ref=chooser-v1"
+            target="_blank">CC BY-NC-ND
+            4.0</a>
+        </small>
       </p>
     </form>
 
