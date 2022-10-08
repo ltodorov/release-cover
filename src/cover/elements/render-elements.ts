@@ -1,7 +1,12 @@
 import { coverConfig } from "../cover-config";
+import { renderCircle } from "./render-circle";
+import { renderSquare } from "./render-square";
+import { renderTriangle } from "./render-triangle";
 
 const elementSizes: number[] = [100, 150, 200, 250, 300, 350, 400, 500];
 const { size } = coverConfig;
+
+const renders = [renderSquare, renderTriangle, renderCircle];
 
 function renderElements(ctx: CanvasRenderingContext2D, n = 30) {
   ctx.fillStyle = "black";
@@ -14,9 +19,13 @@ function renderElements(ctx: CanvasRenderingContext2D, n = 30) {
       Math.random() * elementSizes.length,
     )];
 
-    ctx.fillStyle = `hsl(0, 0%, ${Math.random() * 50}%)`;
-    ctx.globalAlpha = Math.random() / 2;
-    ctx.fillRect(posX, posY, size, size);
+    const renderIndex = Math.floor(Math.random() * renders.length);
+    renders[renderIndex]({
+      ctx,
+      posX,
+      posY,
+      size,
+    });
   }
 
   ctx.globalAlpha = 1;
