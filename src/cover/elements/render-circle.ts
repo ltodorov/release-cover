@@ -1,16 +1,11 @@
-interface RenderCircleProps {
-  ctx: CanvasRenderingContext2D;
-  posX: number;
-  posY: number;
-  size: number;
-}
+import { RenderShape } from "../../types/render-shape";
 
 function renderCircle({
   ctx,
   posX,
   posY,
   size,
-}: RenderCircleProps) {
+}: RenderShape) {
   ctx.beginPath();
   ctx.arc(posX, posY, size, 0, Math.PI * 2);
   ctx.fillStyle = `hsl(0, 0%, ${Math.random() * 50}%)`;

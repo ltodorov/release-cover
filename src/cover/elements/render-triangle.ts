@@ -1,16 +1,11 @@
-interface RenderTriangleProps {
-  ctx: CanvasRenderingContext2D;
-  posX: number;
-  posY: number;
-  size: number;
-}
+import { RenderShape } from "../../types/render-shape";
 
 function renderTriangle({
   ctx,
   posX,
   posY,
   size,
-}: RenderTriangleProps) {
+}: RenderShape) {
   const height = Math.sqrt(3) / 2 * size;
   ctx.beginPath();
   ctx.moveTo(posX + size / 2, posY);
