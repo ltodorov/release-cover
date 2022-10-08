@@ -6,7 +6,7 @@ function renderTriangle({
   posY,
   size,
 }: RenderShape) {
-  const height = Math.sqrt(3) / 2 * size;
+  const height = Math.sin(Math.PI / 3) * size;
   ctx.beginPath();
   ctx.moveTo(posX + size / 2, posY);
   ctx.lineTo(posX + size, posY + height);

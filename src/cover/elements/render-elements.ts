@@ -18,9 +18,9 @@ function renderElements(ctx: CanvasRenderingContext2D, n = 30) {
     const size = elementSizes[Math.floor(
       Math.random() * elementSizes.length,
     )];
-
-    const renderIndex = Math.floor(Math.random() * renders.length);
-    renders[renderIndex]({
+    renders[Math.floor(
+      Math.random() * renders.length,
+    )]({
       ctx,
       posX,
       posY,
