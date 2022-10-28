@@ -1,5 +1,5 @@
-import { handleSubmit } from "./handlers/submit";
-import { handleReset } from "./handlers/reset";
+import { handleSubmit } from "./handlers/handle-submit";
+import { handleReset } from "./handlers/handle-reset";
 
 import "./app.css";
 

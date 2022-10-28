@@ -1,4 +1,4 @@
-import { handleError } from "../handlers/error";
+import { handleError } from "../handlers/handle-error";
 import type { ReleaseDetails } from "../types/release-details";
 import { renderBackground } from "./backround/render-background";
 import { coverConfig } from "./cover-config";
