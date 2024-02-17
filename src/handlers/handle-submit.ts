@@ -1,5 +1,6 @@
 import { renderCover } from "../cover/render-cover";
 import { getValue } from "../helpers/get-value";
+import { handleError } from "./handle-error";
 
 function handleSubmit(event: Event) {
   event.preventDefault();
@@ -15,7 +16,7 @@ function handleSubmit(event: Event) {
       releaseTitle: getValue(elements.namedItem("release-title")),
       releaseNo: getValue(elements.namedItem("release-no")),
       elementsAmount: parseInt(getValue(elements.namedItem("random-elements")), 10),
-    });
+    }).catch(handleError);
   }
 }
 
