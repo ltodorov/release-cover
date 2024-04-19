@@ -1,13 +1,35 @@
+/// <reference types="vitest" />
 import { defineConfig } from "vite";
 import { analyzer } from "vite-bundle-analyzer";
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    analyzer({
-      analyzerMode: "static",
-      fileName: "report",
-      reportTitle: "Release Cover Bundle Analyzer",
-    }),
-  ],
+    plugins: [
+        analyzer({
+            analyzerMode: "static",
+            fileName: "report",
+            reportTitle: "Release Cover Bundle Analyzer",
+        }),
+    ],
+    test: {
+        environment: "jsdom",
+        environmentOptions: {
+            jsdom: {
+                resources: "usable",
+            },
+        },
+        setupFiles: ["./vitest.setup.ts"],
+        deps: {
+            optimizer: {
+                web: {
+                    include: ["vitest-canvas-mock"],
+                },
+            },
+        },
+        coverage: {
+            include: ["src/*/**"], // Exclude app.ts
+            thresholds: {
+                100: true,
+            },
+        },
+    }
 });
