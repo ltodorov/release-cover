@@ -1,5 +1,5 @@
-import { describe, expect, it, vi } from "vitest";
-import { renderTriangle } from "../render-triangle";
+import { describe, expect, it, vi } from "vitest"
+import { renderTriangle } from "../render-triangle"
 
 describe("renderTriangle", () => {
     it("should draw a triangle", () => {

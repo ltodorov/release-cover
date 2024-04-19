@@ -1,5 +1,5 @@
-import { describe, expect, it } from "vitest";
-import { getValue } from "../get-value";
+import { describe, expect, it } from "vitest"
+import { getValue } from "../get-value"
 
 describe("getValue", () => {
     it("should return input element's value", () => {

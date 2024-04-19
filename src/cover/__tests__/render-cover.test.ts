@@ -1,11 +1,11 @@
-import { afterEach, describe, expect, it, vi } from "vitest";
-import { type RenderProps, renderCover } from "../render-cover";
-import { renderBackground } from "../backround/render-background";
-import { setDownloadLink } from "../download/set-download-link";
-import { renderElements } from "../elements/render-elements";
-import { renderLogo } from "../logo/render-logo";
-import { renderTexts } from "../texts/render-texts";
-import { handleError } from "../../handlers/handle-error";
+import { afterEach, describe, expect, it, vi } from "vitest"
+import { handleError } from "../../handlers/handle-error"
+import { renderBackground } from "../backround/render-background"
+import { setDownloadLink } from "../download/set-download-link"
+import { renderElements } from "../elements/render-elements"
+import { renderLogo } from "../logo/render-logo"
+import { type RenderProps, renderCover } from "../render-cover"
+import { renderTexts } from "../texts/render-texts"
 
 vi.mock("../backround/render-background", () => ({
     renderBackground: vi.fn(),

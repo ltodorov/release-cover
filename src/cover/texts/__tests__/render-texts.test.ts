@@ -1,5 +1,5 @@
-import { describe, expect, it, vi } from "vitest";
-import { renderTexts } from "../render-texts";
+import { describe, expect, it, vi } from "vitest"
+import { renderTexts } from "../render-texts"
 
 describe("renderTexts", () => {
     it("should render all texts", () => {

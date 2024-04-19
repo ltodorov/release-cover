@@ -1,6 +1,6 @@
 {
   "name": "release-cover",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "No Smoking Recordings release cover generator",
   "private": true,
   "type": "module",
@@ -11,22 +11,23 @@
     "preview": "vite preview",
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "lint": "eslint ."
+    "lint": "biome lint --apply .",
+    "format": "biome format --write .",
+    "check": "biome check --apply ."
   },
   "engines": {
-    "node": ">=18",
-    "pnpm": ">=8"
+    "node": ">=20",
+    "pnpm": ">=9"
   },
-  "keywords": [
-    "typescript"
-  ],
+  "keywords": ["typescript"],
   "author": "Lyubomir Todorov",
   "license": "CC-BY-ND-4.0",
   "devDependencies": {
+    "@biomejs/biome": "^1.7.0",
     "@types/eslint": "^8.56.6",
     "@vitest/coverage-v8": "^1.5.0",
-    "eslint": "^8.57.0",
     "jsdom": "^24.0.0",
+    "lefthook": "^1.6.10",
     "typescript": "^5.4.3",
     "typescript-eslint": "^7.3.1",
     "vite": "^5.2.9",

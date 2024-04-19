@@ -1,11 +1,11 @@
-import { afterEach, describe, expect, it, vi } from "vitest";
-import { renderLogo } from "../render-logo";
+import { afterEach, describe, expect, it, vi } from "vitest"
+import { renderLogo } from "../render-logo"
 
-const mockImage = new Image();
+const mockImage = new Image()
 mockImage.src = "logo.svg"
 
 vi.mock("../../../helpers/get-image", () => ({
-    getImage: vi.fn(async () => Promise.resolve(mockImage))
+    getImage: vi.fn(async () => Promise.resolve(mockImage)),
 }))
 
 describe("renderLogo", () => {
@@ -21,7 +21,11 @@ describe("renderLogo", () => {
         await renderLogo(ctx)
 
         expect(spyDrawImage).toHaveBeenCalledWith(
-            mockImage, 2200, 2400, 275.88240703841086, 300,
+            mockImage,
+            2200,
+            2400,
+            275.88240703841086,
+            300,
         )
-    });
-});
+    })
+})

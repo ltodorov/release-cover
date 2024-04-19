@@ -1,8 +1,8 @@
-import { afterEach, describe, expect, it, vi } from "vitest";
-import { renderElements } from "../render-elements";
-import { renderSquare } from "../render-square";
-import { renderTriangle } from "../render-triangle";
-import { renderCircle } from "../render-circle";
+import { afterEach, describe, expect, it, vi } from "vitest"
+import { renderCircle } from "../render-circle"
+import { renderElements } from "../render-elements"
+import { renderSquare } from "../render-square"
+import { renderTriangle } from "../render-triangle"
 
 vi.mock("../render-square", () => ({
     renderSquare: vi.fn(),

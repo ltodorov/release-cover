@@ -1,10 +1,10 @@
-import { handleSubmit } from "./handlers/handle-submit";
-import { handleReset } from "./handlers/handle-reset";
+import { handleReset } from "./handlers/handle-reset"
+import { handleSubmit } from "./handlers/handle-submit"
 
-import "./app.css";
+import "./app.css"
 
 document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("details");
-  form?.addEventListener("submit", handleSubmit);
-  form?.addEventListener("reset", handleReset);
-});
+    const form = document.getElementById("details")
+    form?.addEventListener("submit", handleSubmit)
+    form?.addEventListener("reset", handleReset)
+})
