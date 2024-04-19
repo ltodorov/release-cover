@@ -9,9 +9,9 @@ describe("renderTexts", () => {
 
         renderTexts({
             ctx,
-            artistLine1: "Artist 1",
-            artistLine2: "Artist 2",
-            releaseTitle: "Release Title",
+            artistLine1: "ART1",
+            artistLine2: "ART2",
+            releaseTitle: "Title",
             releaseNo: "CAT001",
         })
 

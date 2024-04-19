@@ -28,10 +28,10 @@ vi.mock("../../handlers/handle-error", () => ({
 
 describe("renderCover", () => {
     const defaultCoverProps: RenderProps = {
-        artistLine1: "Line 1",
-        artistLine2: "Line 2",
+        artistLine1: "ART1",
+        artistLine2: "ART2",
         releaseTitle: "Title",
-        releaseNo: "NSR100",
+        releaseNo: "CAT002",
         elementsAmount: 0,
     }
 

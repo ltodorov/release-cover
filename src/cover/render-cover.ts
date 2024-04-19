@@ -51,5 +51,6 @@ async function renderCover({
 }
 
 export {
+  type RenderProps,
   renderCover,
 };
