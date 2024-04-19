@@ -1,5 +1,5 @@
-import { afterEach, describe, expect, it, vi } from "vitest";
-import { getImage } from "../get-image";
+import { afterEach, describe, expect, it, vi } from "vitest"
+import { getImage } from "../get-image"
 
 class ImageMock extends Image {
     #src = ""
@@ -39,13 +39,15 @@ describe("getImage", () => {
         expect.assertions(1)
 
         const errorMessage = "Test error!"
-        const errorFn = vi.fn((type: string, callback: (err: unknown) => void) => {
-            if (type === "error") {
-                callback({
-                    message: errorMessage
-                } as unknown as ErrorEvent)
-            }
-        })
+        const errorFn = vi.fn(
+            (type: string, callback: (err: unknown) => void) => {
+                if (type === "error") {
+                    callback({
+                        message: errorMessage,
+                    } as unknown as ErrorEvent)
+                }
+            },
+        )
         HTMLImageElement.prototype.addEventListener = errorFn
         vi.stubGlobal("Image", ImageMock)
 
@@ -59,11 +61,13 @@ describe("getImage", () => {
     it("should return default error message", async () => {
         expect.assertions(1)
 
-        const errorFn = vi.fn((type: string, callback: (err: unknown) => void) => {
-            if (type === "error") {
-                callback({})
-            }
-        })
+        const errorFn = vi.fn(
+            (type: string, callback: (err: unknown) => void) => {
+                if (type === "error") {
+                    callback({})
+                }
+            },
+        )
         HTMLImageElement.prototype.addEventListener = errorFn
         vi.stubGlobal("Image", ImageMock)
 

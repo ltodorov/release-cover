@@ -1,5 +1,5 @@
-import { describe, expect, it, vi } from "vitest";
-import { renderCircle } from "../render-circle";
+import { describe, expect, it, vi } from "vitest"
+import { renderCircle } from "../render-circle"
 
 describe("renderCircle", () => {
     it("should draw an arc", () => {

@@ -1,6 +1,6 @@
 /// <reference types="vitest" />
-import { defineConfig } from "vite";
-import { analyzer } from "vite-bundle-analyzer";
+import { defineConfig } from "vite"
+import { analyzer } from "vite-bundle-analyzer"
 
 export default defineConfig({
     plugins: [
@@ -31,5 +31,5 @@ export default defineConfig({
                 100: true,
             },
         },
-    }
-});
+    },
+})

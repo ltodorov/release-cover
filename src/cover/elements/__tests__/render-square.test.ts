@@ -1,5 +1,5 @@
-import { describe, expect, it, vi } from "vitest";
-import { renderSquare } from "../render-square";
+import { describe, expect, it, vi } from "vitest"
+import { renderSquare } from "../render-square"
 
 describe("renderSquare", () => {
     it("should draw a square", () => {

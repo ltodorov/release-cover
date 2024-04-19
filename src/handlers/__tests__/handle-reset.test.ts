@@ -1,8 +1,8 @@
-import { afterEach, describe, expect, it, vi } from "vitest";
-import { handleReset } from "../handle-reset";
+import { afterEach, describe, expect, it, vi } from "vitest"
+import { handleReset } from "../handle-reset"
 
 describe("handleReset", () => {
-    let coverEl: HTMLElement;
+    let coverEl: HTMLElement
 
     afterEach(() => {
         document.body.removeChild(coverEl)
@@ -12,7 +12,10 @@ describe("handleReset", () => {
         coverEl = document.createElement("div")
         coverEl.id = "cover"
         document.body.appendChild(coverEl)
-        const spyClearRect = vi.spyOn(CanvasRenderingContext2D.prototype, "clearRect")
+        const spyClearRect = vi.spyOn(
+            CanvasRenderingContext2D.prototype,
+            "clearRect",
+        )
 
         handleReset()
 
@@ -23,7 +26,10 @@ describe("handleReset", () => {
         coverEl = document.createElement("canvas")
         coverEl.id = "cover"
         document.body.appendChild(coverEl)
-        const spyClearRect = vi.spyOn(CanvasRenderingContext2D.prototype, "clearRect")
+        const spyClearRect = vi.spyOn(
+            CanvasRenderingContext2D.prototype,
+            "clearRect",
+        )
 
         handleReset()
 

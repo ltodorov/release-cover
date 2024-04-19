@@ -1,6 +1,6 @@
-import { afterEach, describe, expect, it, vi } from "vitest";
-import { handleSubmit } from "../handle-submit";
-import { renderCover } from "../../cover/render-cover";
+import { afterEach, describe, expect, it, vi } from "vitest"
+import { renderCover } from "../../cover/render-cover"
+import { handleSubmit } from "../handle-submit"
 
 vi.mock("../../cover/render-cover", () => ({
     renderCover: vi.fn(() => Promise.resolve()),
@@ -32,7 +32,7 @@ describe("handleSubmit", () => {
         const event = new Event("submit")
         Object.defineProperty(event, "target", {
             value: formEl,
-        });
+        })
 
         handleSubmit(event)
 
@@ -50,7 +50,7 @@ describe("handleSubmit", () => {
         const event = new Event("submit")
         Object.defineProperty(event, "target", {
             value: divEl,
-        });
+        })
 
         handleSubmit(event)
 

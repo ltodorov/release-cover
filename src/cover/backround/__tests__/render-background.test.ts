@@ -1,11 +1,11 @@
-import { afterEach, describe, expect, it, vi } from "vitest";
-import { renderBackground } from "../render-background";
+import { afterEach, describe, expect, it, vi } from "vitest"
+import { renderBackground } from "../render-background"
 
-const mockImage = new Image();
+const mockImage = new Image()
 mockImage.src = "background.jpg"
 
 vi.mock("../../../helpers/get-image", () => ({
-    getImage: vi.fn(async () => Promise.resolve(mockImage))
+    getImage: vi.fn(async () => Promise.resolve(mockImage)),
 }))
 
 describe("renderBackground", () => {
@@ -22,8 +22,6 @@ describe("renderBackground", () => {
 
         await renderBackground(ctx)
 
-        expect(spyDrawImage).toHaveBeenCalledWith(
-            mockImage, 0, 0,
-        )
-    });
-});
+        expect(spyDrawImage).toHaveBeenCalledWith(mockImage, 0, 0)
+    })
+})
