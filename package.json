@@ -16,7 +16,7 @@
     "check": "biome check --apply ."
   },
   "engines": {
-    "node": ">=20",
+    "node": ">=18",
     "pnpm": ">=9"
   },
   "keywords": ["typescript"],
