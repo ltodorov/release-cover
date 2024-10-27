@@ -26,7 +26,7 @@ export default defineConfig({
             },
         },
         coverage: {
-            include: ["src/*/**"], // Exclude app.ts
+            include: ["src/*/**"],
             thresholds: {
                 100: true,
             },
