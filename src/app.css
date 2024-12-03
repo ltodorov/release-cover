@@ -4,6 +4,10 @@
     box-sizing: inherit;
 }
 
+:root {
+    color-scheme: light dark;
+}
+
 html {
     box-sizing: border-box;
 }
@@ -72,4 +76,15 @@ body {
     max-height: 100vh;
     aspect-ratio: 1;
     background-color: whitesmoke;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        color: white;
+        background-color: lch(from black 5 0 0);
+    }
+
+    .cover {
+        background-color: black;
+    }
 }
