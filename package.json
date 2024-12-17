@@ -20,7 +20,7 @@
     "node": ">=20",
     "pnpm": ">=9"
   },
-  "packageManager": "pnpm@9.14.2",
+  "packageManager": "pnpm@9.15.0",
   "keywords": ["typescript"],
   "author": "Lyubomir Todorov",
   "license": "CC-BY-ND-4.0",
@@ -28,7 +28,7 @@
     "@biomejs/biome": "^1.9.4",
     "@vitest/coverage-v8": "^2.1.8",
     "jsdom": "^25.0.1",
-    "lefthook": "^1.8.5",
+    "lefthook": "^1.9.2",
     "typescript": "^5.7.2",
     "vite": "^5.4.11",
     "vite-bundle-analyzer": "^0.12.1",
