@@ -1,13 +1,18 @@
+import { visualizer } from "rollup-plugin-visualizer"
 /// <reference types="vitest" />
 import { defineConfig } from "vite"
-import { analyzer } from "vite-bundle-analyzer"
 
 export default defineConfig({
     plugins: [
-        analyzer({
-            analyzerMode: "static",
-            fileName: "report",
-            reportTitle: "Release Cover Bundle Analyzer",
+        visualizer({
+            gzipSize: true,
+            brotliSize: true,
+            emitFile: true,
+            exclude: [
+                {
+                    file: "**/modulepreload-polyfill.js",
+                },
+            ],
         }),
     ],
     test: {
