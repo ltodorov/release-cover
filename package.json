@@ -26,13 +26,13 @@
   "license": "CC-BY-ND-4.0",
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "@vitest/coverage-v8": "^3.0.4",
+    "@vitest/coverage-v8": "^3.0.6",
     "jsdom": "^26.0.0",
     "lefthook": "^1.10.10",
     "rollup-plugin-visualizer": "^5.14.0",
     "typescript": "^5.7.3",
-    "vite": "^6.0.11",
-    "vitest": "^3.0.4",
+    "vite": "^6.1.0",
+    "vitest": "^3.0.6",
     "vitest-canvas-mock": "^0.3.3"
   }
 }
