@@ -1,10 +1,13 @@
 pre-commit:
+  parallel: true
   jobs:
-    - name: Lint staged files
-      run: pnpm lint {staged_files}
-    - name: Format staged files
+    - name: Linting
+      run: pnpm lint {staged_files} --fix
+      stage_fixed: true
+
+    - name: Formatting
       run: pnpm format {staged_files}
-    - run: git update-index --again
+      stage_fixed: true
 # EXAMPLE USAGE:
 #
 #   Refer for explanation to following link:
