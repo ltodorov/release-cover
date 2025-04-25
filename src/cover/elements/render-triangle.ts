@@ -1,3 +1,4 @@
+import { getRandomColor } from "../../helpers/get-random-color"
 import type { RenderShape } from "../../types/render-shape"
 
 function renderTriangle({ ctx, posX, posY, size }: RenderShape) {
@@ -6,7 +7,7 @@ function renderTriangle({ ctx, posX, posY, size }: RenderShape) {
     ctx.moveTo(posX + size / 2, posY)
     ctx.lineTo(posX + size, posY + height)
     ctx.lineTo(posX, posY + height)
-    ctx.fillStyle = `hsl(0, 0%, ${Math.random() * 50}%)`
+    ctx.fillStyle = getRandomColor()
     ctx.globalAlpha = Math.random() / 2
     ctx.fill()
     ctx.closePath()

@@ -4,6 +4,7 @@ import { renderSquare } from "./render-square"
 import { renderTriangle } from "./render-triangle"
 
 const elementSizes: number[] = [100, 150, 200, 250, 300, 350, 400, 500]
+const elementSizeRatio: number[] = elementSizes.map((size) => size / 3000)
 const { size } = coverConfig
 
 const renders = [renderSquare, renderTriangle, renderCircle]
@@ -15,13 +16,14 @@ function renderElements(ctx: CanvasRenderingContext2D, n = 30) {
     for (let i = 0; i < n; i += 1) {
         const posX = getPosition(i)
         const posY = getPosition(i)
-        const size =
-            elementSizes[Math.floor(Math.random() * elementSizes.length)]
+        const elementSize =
+            elementSizeRatio[Math.floor(Math.random() * elementSizes.length)] *
+            size
         renders[Math.floor(Math.random() * renders.length)]({
             ctx,
             posX,
             posY,
-            size,
+            size: elementSize,
         })
     }
 
@@ -29,7 +31,7 @@ function renderElements(ctx: CanvasRenderingContext2D, n = 30) {
 }
 
 function getPosition(index: number): number {
-    const maxPosition = size - Math.max(...elementSizes) - index
+    const maxPosition = size - Math.max(...elementSizeRatio) * size - index
     return index + Math.random() * maxPosition
 }
 
