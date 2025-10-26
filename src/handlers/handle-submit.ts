@@ -1,14 +1,14 @@
-import { renderCover } from "../cover/render-cover"
-import { getValue } from "../helpers/get-value"
-import { handleError } from "./handle-error"
+import { renderCover } from "../cover/render-cover";
+import { getValue } from "../helpers/get-value";
+import { handleError } from "./handle-error";
 
 function handleSubmit(event: Event) {
-    event.preventDefault()
+    event.preventDefault();
 
-    const { target } = event
+    const { target } = event;
 
     if (target instanceof HTMLFormElement) {
-        const { elements } = target
+        const { elements } = target;
 
         renderCover({
             artistLine1: getValue(elements.namedItem("artist-line-1")),
@@ -19,8 +19,8 @@ function handleSubmit(event: Event) {
                 getValue(elements.namedItem("random-elements")),
                 10,
             ),
-        }).catch(handleError)
+        }).catch(handleError);
     }
 }
 
-export { handleSubmit }
+export { handleSubmit };

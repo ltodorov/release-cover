@@ -18,7 +18,7 @@
     "node": ">=22",
     "pnpm": ">=10"
   },
-  "packageManager": "pnpm@10.17.1+sha512.17c560fca4867ae9473a3899ad84a88334914f379be46d455cbf92e5cf4b39d34985d452d2583baf19967fa76cb5c17bc9e245529d0b98745721aa7200ecaf7a",
+  "packageManager": "pnpm@10.19.0+sha512.c9fc7236e92adf5c8af42fd5bf1612df99c2ceb62f27047032f4720b33f8eacdde311865e91c411f2774f618d82f320808ecb51718bfa82c060c4ba7c76a32b8",
   "keywords": [
     "typescript"
   ],
@@ -26,17 +26,17 @@
   "license": "CC-BY-ND-4.0",
   "devDependencies": {
     "@eslint/js": "^9.38.0",
-    "@vitest/coverage-v8": "^3.2.4",
+    "@vitest/coverage-v8": "^4.0.3",
     "eslint": "^9.38.0",
     "globals": "^16.4.0",
     "jsdom": "^27.0.1",
-    "lefthook": "^1.13.6",
+    "lefthook": "^2.0.1",
     "prettier": "3.6.2",
     "rollup-plugin-visualizer": "^6.0.5",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.46.1",
-    "vite": "^7.1.11",
-    "vitest": "^3.2.4",
+    "typescript-eslint": "^8.46.2",
+    "vite": "^7.1.12",
+    "vitest": "^4.0.3",
     "vitest-canvas-mock": "^0.3.3"
   },
   "pnpm": {

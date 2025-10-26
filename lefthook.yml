@@ -2,11 +2,11 @@ pre-commit:
   parallel: true
   jobs:
     - name: Linting
-      run: pnpm lint {staged_files} --fix
+      run: ./scripts/hooks.sh pnpm lint {staged_files} --fix
       stage_fixed: true
 
     - name: Formatting
-      run: pnpm format {staged_files}
+      run: ./scripts/hooks.sh pnpm format {staged_files}
       stage_fixed: true
 # EXAMPLE USAGE:
 #

@@ -1,5 +1,5 @@
 function handleError(err: unknown) {
-    console.error(err)
+    console.error(err);
 }
 
-export { handleError }
+export { handleError };
