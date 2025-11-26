@@ -9,13 +9,6 @@ export default defineConfig({
             },
         },
         setupFiles: ["./vitest.setup.ts"],
-        deps: {
-            optimizer: {
-                web: {
-                    include: ["vitest-canvas-mock"],
-                },
-            },
-        },
         coverage: {
             include: ["src/*/**/*.{ts,tsx}"],
             exclude: [...coverageConfigDefaults.exclude, "src/types/**"],
