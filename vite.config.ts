@@ -7,11 +7,6 @@ export default defineConfig({
             gzipSize: true,
             brotliSize: true,
             emitFile: true,
-            exclude: [
-                {
-                    file: "**/modulepreload-polyfill.js",
-                },
-            ],
         }),
     ],
 });
