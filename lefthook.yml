@@ -4,6 +4,8 @@ pre-commit:
     - name: Linting
       run: ./scripts/hooks.sh pnpm lint {staged_files} --fix
       stage_fixed: true
+      only:
+        staged: "*.{js,ts,tsx,jsx}"
 
     - name: Formatting
       run: ./scripts/hooks.sh pnpm format {staged_files}
