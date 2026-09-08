@@ -2,6 +2,7 @@ import { defineConfig, coverageConfigDefaults } from "vitest/config";
 
 export default defineConfig({
     test: {
+        pool: "vmThreads",
         environment: "jsdom",
         environmentOptions: {
             jsdom: {
