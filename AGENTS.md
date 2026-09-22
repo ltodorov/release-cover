@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This repository is a small frontend web application that generates release covers for No Smoking Recordings. It uses TypeScript, Vite, Vitest, ESLint, and Prettier.
+This repository is a small frontend web application that generates release covers for No Smoking Recordings. It uses TypeScript, Vite, Vitest, Oxlint, and Oxfmt.
 
 ## Recommended agent behavior
 
@@ -20,8 +20,9 @@ Use the repository scripts in `package.json`:
 - `pnpm preview` — preview the built app.
 - `pnpm test` — run Vitest.
 - `pnpm coverage` — run tests with coverage.
-- `pnpm lint` — run ESLint.
-- `pnpm format` — run Prettier.
+- `pnpm lint` — run Oxlint.
+- `pnpm format` — check formatting with Oxfmt.
+- `pnpm format:fix` — format files with Oxfmt.
 
 Environment:
 
@@ -31,7 +32,7 @@ Environment:
 ## Continuous integration
 
 The repository uses GitHub Actions defined in `.github/workflows/node.js.yml`.
-The workflow installs dependencies with `pnpm install`, then runs `pnpm lint`, `pnpm coverage`, and `pnpm build` on Node 22 and 24.
+The workflow installs dependencies with `pnpm install`, then runs `pnpm lint`, `pnpm format`, `pnpm coverage`, and `pnpm build` on Node 22 and 24.
 
 ## Key files and directories
 
@@ -39,7 +40,7 @@ The workflow installs dependencies with `pnpm install`, then runs `pnpm lint`, `
 - `src/app.ts` — application bootstrap
 - `src/cover/` — cover rendering components and utilities
 - `src/cover/__tests__/` and similar `__tests__` folders — test files for each module
-- `tsconfig.json`, `vite.config.ts`, `vitest.config.ts`, `eslint.config.js` — project configuration
+- `tsconfig.json`, `vite.config.ts`, `vitest.config.ts`, `.oxfmtrc.json` — project configuration
 - `lefthook.yml` — git hook configuration (preinstall enforces pnpm)
 
 ## Notes for agents
