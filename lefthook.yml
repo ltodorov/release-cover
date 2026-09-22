@@ -10,3 +10,5 @@ pre-commit:
     - name: Formatting
       run: ./scripts/hooks.sh pnpm format:fix {staged_files}
       stage_fixed: true
+      only:
+        staged: "*.{js,ts,tsx,jsx,css}"
